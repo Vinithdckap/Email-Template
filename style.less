@@ -1,0 +1,327 @@
+  @import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap');
+
+
+  * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+  }
+
+  @font-face {
+      font-family: 'Helvetica';
+      src: url(/fonts/fonts/helvetica/Helvetica-Bold.eot);
+      font-weight: bold;
+  }
+
+  @font-face {
+      font-family: 'Arial Italic';
+      font-style: normal;
+      font-weight: normal;
+      src: url(/fonts/fonts/arial/ArialCEItalic.woff);
+  }
+
+  @font-face {
+      font-family: 'Arial Bold';
+      font-style: normal;
+      font-weight: bold;
+      src: url(/fonts/fonts/arial/ARIALBD\ 1.woff);
+  }
+
+  @font-face {
+      font-family: 'Arial Regular';
+      font-style: normal;
+      font-weight: normal;
+      src: local('Arial Regular'), url(/fonts/fonts/arial/ARIAL.woff) format('woff');
+  }
+
+
+  @arial :'Arial Italic';
+  @pt : 'PT Sans', sans-serif;
+  @Helvetica: 'Helvetica', sans-serif;
+
+  body {
+      margin: 0;
+  }
+
+  table {
+      border-spacing: 0;
+
+  }
+
+  td {
+      padding: 0;
+  }
+
+  img {
+      border: 0;
+  }
+
+  .wrapper {
+      width: 100%;
+      //   table-layout: fixed;
+  }
+
+  .main {
+      width: 100%;
+      max-width: 700px;
+      background-color: #F8F7F7;
+
+  }
+
+  .logoDiv {
+      width: 100%;
+      max-width: 85px;
+      padding: 15px 0px;
+      text-align: center;
+      box-shadow: 0px 3px 20px #000000;
+  }
+
+  .bannerImg {
+      background-image: url(/Images/Background.png);
+      background-position: right;
+      background-size: cover;
+      background-repeat: no-repeat;
+      max-width: 100%;
+      text-align: center;
+  }
+
+  .bannerTd {
+      padding: 23px 0px 30px 0px;
+
+  }
+
+  h1 {
+      font: bold 32px/30px @Helvetica;
+      color: #C6EF7A;
+      padding-bottom: 6px;
+  }
+
+  .description {
+      font-family: 'Arial Italic';
+      font-size: 16px;
+      line-height: 20px;
+      font-style: italic;
+      color: #fff;
+      text-align: center;
+      padding: 6px 20px 19px 20px;
+
+  }
+
+  .orderId,
+  .orderDate {
+      font: bold 20px/20px;
+      font-family: 'Arial Bold';
+      color: #fff;
+
+  }
+
+  .orderId {
+      padding-bottom: 6px;
+  }
+
+  .orderDate {
+      padding-bottom: 19px;
+  }
+
+
+  button {
+      background-color: #B561AF;
+      width: 100%;
+      max-width: 230px;
+      border-radius: 6px;
+      color: white;
+      font: bold 18px/23px @pt;
+      padding: 14px 0px;
+      border: none;
+      cursor: pointer;
+
+  }
+
+
+  .shippingInfo {
+
+      padding: 10px 25px;
+  }
+
+  .shoppingTable {
+      padding: 19px 0px 20px 12px;
+      display: inline-block;
+      width: 50%;
+
+  }
+
+  .outerTable {
+      background-color: white;
+      box-shadow: 0px 3px 20px #00000054;
+
+      width: 100%;
+  }
+
+  .columns {
+      display: flex;
+      flex-wrap: wrap;
+  }
+
+  .second {
+      width: unset;
+  }
+
+
+  .info {
+      color: #004884;
+      font-size: 16px;
+      line-height: 25px;
+      font-weight: bold;
+      font-family: 'Arial Bold';
+  }
+
+  .address {
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 19px;
+      font-family: 'Arial Regular';
+      color: #000000;
+      max-width: 180px;
+      text-align: unset;
+      padding: 9px 0px 25px 0px;
+
+  }
+
+  .small {
+      color: #004884;
+      font-size: 13px;
+      line-height: 22px;
+      font-weight: bold;
+      font-family: 'Arial Bold';
+  }
+
+  .visa {
+      color: black;
+      font-size: 13px;
+      line-height: 22px;
+      font-weight: 400;
+      font-family: 'Arial Regular';
+  }
+
+  .comment {
+      margin: 20px 20px 0px 12px;
+      border-bottom: 1px solid #C4C4C4;
+  }
+
+  .Order {
+      width: 100%;
+      max-width: 100%;
+      padding: 12px 0px 18px 12px;
+  }
+
+  .footerDiv {
+      background-color: #0C2A4A;
+  }
+
+  .feedback {
+      font-family: 'Arial Bold';
+      font-size: 14px;
+      line-height: 16px;
+      color: #fff;
+      max-width: 198px;
+  }
+
+  .two {
+      font-size: 12px;
+      text-align: right;
+
+  }
+
+  .number {
+      font-size: 13px;
+      color: white;
+  }
+
+  .feedbackSpan {
+      font-size: 12px;
+      font-family: 'Arial Regular';
+      padding-top: 5px;
+
+  }
+
+  .connect {
+      padding-bottom: 5px;
+      text-transform: uppercase;
+  }
+
+  .webUrl {
+      color: #C6EF7A;
+      font-family: 'Arial Regular';
+      font-size: 12px;
+      line-height: 16px;
+  }
+
+  .two-column {
+      display: inline-block;
+      vertical-align: top;
+  }
+
+  .footerData {
+      text-align: center;
+  }
+
+  .footerInfo {
+      text-align: left;
+      padding-left: 15px;
+
+      a {
+          padding-right: 20px;
+          text-decoration: none;
+
+      }
+  }
+
+  .innerTable {
+      padding: 20px 0px;
+
+  }
+
+  .footerLogo {
+      padding-right: 15px;
+      border-right: 1px solid #707070;
+  }
+
+  .copyright {
+      font-size: 9px;
+      color: white;
+      font-family: 'Arial Regular';
+      line-height: 12px;
+      padding-bottom: 9px;
+  }
+
+
+  //   cart
+
+  .tableHead {
+      color: #004884;
+      font-size: 12px;
+      line-height: 25px;
+      font-family: 'Arial Bold';
+      padding-bottom: 5px;
+      border-bottom: 1px solid black;
+  }
+
+  .itemTitle {
+      font-size: 13px;
+      line-height: 20px;
+      font-family: 'Arial Bold';
+
+
+  }
+
+  .price {
+      font-family: 'Arial Regular';
+      vertical-align: top;
+      padding-top: 11px;
+  }
+
+  .features {
+      font-size: 9px;
+      line-height: 14px;
+      font-family: 'Arial Regular';
+  }
