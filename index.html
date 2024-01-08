@@ -7,19 +7,321 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title> HTML Email Template</title>
-	<link rel="stylesheet" href="/style.css">
+
+	<!-- <link rel="stylesheet" href="/style.css"> -->
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap');
+
+		* {
+			padding: 0;
+			margin: 0;
+			box-sizing: border-box;
+		}
+
+		@font-face {
+			font-family: 'Helvetica';
+			src: url(/fonts/fonts/helvetica/Helvetica-Bold.eot);
+			font-weight: bold;
+		}
+
+		@font-face {
+			font-family: 'Arial Italic';
+			font-style: normal;
+			font-weight: normal;
+			src: url(/fonts/fonts/arial/ArialCEItalic.woff);
+		}
+
+		@font-face {
+			font-family: 'Arial Bold';
+			font-style: normal;
+			font-weight: bold;
+			src: url(/fonts/fonts/arial/ARIALBD\ 1.woff);
+		}
+
+		@font-face {
+			font-family: 'Arial Regular';
+			font-style: normal;
+			font-weight: normal;
+			src: local('Arial Regular'), url(/fonts/fonts/arial/ARIAL.woff) format('woff');
+		}
+
+		body {
+			margin: 0;
+		}
+
+		table {
+			border-spacing: 0;
+
+		}
+
+		td {
+			padding: 0;
+		}
+
+		img {
+			border: 0;
+		}
+
+		.wrapper {
+			width: 100%;
+			table-layout: fixed;
+		}
+
+
+
+		.logoDiv {
+			width: 100%;
+			box-shadow: 0px 3px 20px #01010138;
+
+		}
+
+		.bannerImg {
+			background-image: url(/Images/Background.png);
+			background-position: right;
+			background-size: cover;
+			background-repeat: no-repeat;
+			max-width: 100%;
+			text-align: center;
+		}
+
+
+
+		h1 {
+			font: bold 32px/30px;
+			font-family: 'Helvetica';
+			color: #C6EF7A;
+
+		}
+
+		.description {
+			font-family: 'Arial Italic';
+			font-size: 16px;
+			font-style: italic;
+			color: #fff;
+			text-align: center;
+		}
+
+		.orderId,
+		.orderDate {
+			font: bold 20px/20px;
+			font-family: 'Arial Bold';
+			color: #fff;
+		}
+
+		button {
+			background-color: #B561AF;
+			width: 100%;
+			max-width: 230px;
+			border-radius: 6px;
+			color: white;
+
+			font-weight: bold;
+			font-size: 18px;
+			line-height: 23px;
+			font-family: 'PT Sans';
+			padding: 14px 0px;
+			border: none;
+			cursor: pointer;
+
+		}
+
+
+
+		.shoppingTable {
+			padding: 19px 0px 20px 12px;
+			display: inline-block;
+			width: 48%;
+		}
+
+		.outerTable {
+			background-color: white;
+			box-shadow: 0px 3px 20px #00000054;
+			width: 100%;
+		}
+
+		.second {
+			width: unset;
+		}
+
+
+		.info {
+			color: #004884;
+			font-size: 16px;
+			line-height: 25px;
+			font-weight: bold;
+			font-family: 'Arial Bold';
+		}
+
+		.address {
+			font-weight: 400;
+			font-size: 13px;
+			line-height: 19px;
+			font-family: 'Arial Regular';
+			color: #000000;
+			max-width: 210px;
+			text-align: unset;
+
+			list-style: none;
+		}
+
+		.small {
+			color: #004884;
+			font-size: 13px;
+			line-height: 22px;
+			font-weight: bold;
+			font-family: 'Arial Bold';
+		}
+
+		.visa {
+			color: black;
+			font-size: 13px;
+			line-height: 22px;
+			font-weight: 400;
+			font-family: 'Arial Regular';
+			padding-left: 10px;
+
+		}
+
+		.comment {
+			margin: 20px 20px 0px 12px;
+			border-bottom: 1px solid #C4C4C4;
+		}
+
+		.Order {
+			width: 100%;
+			max-width: 100%;
+			padding: 12px 0px 18px 12px;
+		}
+
+		.feedback {
+			font-family: 'Arial Bold';
+			font-size: 14px;
+			line-height: 16px;
+			color: #fff;
+			max-width: 198px;
+		}
+
+		.two {
+			font-size: 12px;
+			text-align: right;
+		}
+
+		.number {
+			font-size: 13px;
+			color: white;
+		}
+
+		.feedbackSpan {
+			font-size: 12px;
+			font-family: 'Arial Regular';
+			padding-top: 5px;
+		}
+
+		.connect {
+			padding-bottom: 5px;
+			text-transform: uppercase;
+		}
+
+		.webUrl {
+			color: #C6EF7A;
+			font-family: 'Arial Regular';
+			font-size: 12px;
+			line-height: 16px;
+		}
+
+
+		.footerInfo {
+			text-align: left;
+			padding-left: 15px;
+
+			a {
+				padding-right: 20px;
+				text-decoration: none;
+
+			}
+		}
+
+		.innerTable {
+			padding: 20px 0px;
+
+		}
+
+		.footerLogo {
+			padding-right: 15px;
+			border-right: 1px solid #707070;
+		}
+
+		.copyright {
+			font-size: 9px;
+			color: white;
+			font-family: 'Arial Regular';
+			line-height: 12px;
+			padding-bottom: 9px;
+		}
+
+		.tableHead {
+			color: #004884;
+			font-size: 12px;
+			line-height: 25px;
+			font-family: 'Arial Bold';
+			padding-bottom: 5px;
+			border-bottom: 1px solid black;
+		}
+
+		.itemTitle {
+			font-size: 13px;
+			line-height: 20px;
+			font-family: 'Arial Bold';
+
+
+		}
+
+		.price {
+			font-family: 'Arial Regular';
+			vertical-align: top;
+			padding-top: 11px;
+		}
+
+		.features {
+			font-size: 9px;
+			line-height: 14px;
+			font-family: 'Arial Regular';
+			list-style: none;
+		}
+
+		.tFooter {
+			border-top: 1px solid #C4C4C4;
+
+
+		}
+
+		.footTitle {
+			font-size: 13px;
+			line-height: 21px;
+			font-family: 'Arial Regular';
+		}
+
+		.priceTd {
+			padding: 11px 10px 12px 0px;
+		}
+	</style>
+
+
+
+
+
 </head>
 
 <body>
 
 	<center class="wrapper">
 
-		<table class="main" width="100%">
+		<table class="main" width="100%" style="background-color: #F8F7F7; max-width: 700px;">
 
 
 			<!-- LOGO -->
 			<tr>
-				<td class="logoDiv">
+				<td class="logoDiv" style="padding: 15px 0px; text-align: center; max-width: 85px;">
 					<a href="">
 						<img src="Images/Logo.png" alt="" title="Logo">
 					</a>
@@ -29,16 +331,18 @@
 			<!-- BANNER IMAGE -->
 
 			<tr class="bannerImg">
-				<td class="bannerTd">
+				<td class="bannerTd" style="padding: 23px 0px 30px 0px;">
 					<table>
 						<tr>
 							<td>
-								<h1>Thanks, [Name] for your order!</h1>
-								<p class="description">We have received your order and we’re working to get it packed up
+								<h1 style="padding-bottom: 6px;">Thanks, [Name] for your order!</h1>
+								<p class="description" style="padding: 6px 20px 19px 20px; line-height: 20px;">We have
+									received your order and we’re working to get it packed up
 									and on its way.
 									We’ll send a shipping confirmation emails as soon as it ships.</p>
-								<h4 class="orderId">Order #: 000001</h4>
-								<h4 class="orderDate">Order Date: 12/12/22</h4>
+								<h4 class="orderId" style="padding-bottom: 6px;">Order #: 000001</h4>
+								<h4 class="orderDate" style="padding-bottom: 19px;
+								">Order Date: 12/12/22</h4>
 								<a href="#"><button>CHECK ORDER STATUS</button></a>
 							</td>
 						</tr>
@@ -50,26 +354,31 @@
 			<!-- DESCRIPTIONS -->
 
 			<tr>
-				<td class="shippingInfo">
+				<td class="shippingInfo" style="padding: 10px 25px;">
 					<table class="outerTable">
 						<tr>
-							<td class="columns">
+							<td class="columns" style="display: flex; flex-wrap: wrap;">
 								<table class="shoppingTable">
 									<tr>
 										<td>
 											<h2 class="info">Shipping Info</h2>
-											<p class="address">Antwon Wisozk
-												Company Name
-												75291 Brittany Station Apt. 409
-												Batzburgh, MT 86320
-												United States
-												(507) 725-8352 </p>
+											<ul style="padding-bottom: 25px;
+											padding-top: 9px;">
+												<li class="address">Antwon Wisozk</li>
+												<li class="address">Company Name</li>
+												<li class="address">75291 Brittany Station Apt. 409</li>
+												<li class="address">Batzburgh, MT 86320</li>
+												<li class="address">United States</li>
+												<li class="address">(507) 725-8352 </li>
+											</ul>
+
 										</td>
 									</tr>
 									<tr>
 										<td>
 											<h2 class="info">Shipping Method</h2>
-											<p class="address">Free Shipping - No Shipping Charge</p>
+											<p class="address" style="padding: 9px 0px 25px 0px;">Free Shipping - No
+												Shipping Charge</p>
 										</td>
 									</tr>
 								</table>
@@ -77,25 +386,32 @@
 									<tr>
 										<td>
 											<h2 class="info">Billing Info</h2>
-											<p class="address">Austin Hartmann
-												Company Name
-												38815 Hoppe Ports Apt. 174
-												North Madisynberg, CA 00179
-												United States
-												(320) 332-8230</p>
+											<ul style="padding-bottom: 25px;
+											padding-top: 9px;">
+												<li class="address">Austin Hartmann</li>
+												<li class="address">Company Name</li>
+												<li class="address">38815 Hoppe Ports Apt. 174</li>
+												<li class="address">North Madisynberg, CA 00179</li>
+												<li class="address">United States</li>
+												<li class="address">(320) 332-8230</li>
+											</ul>
 										</td>
 									</tr>
 									<tr>
 										<td>
 											<h2 class="info ">Payment Method</h2>
-											<p class="address">Credit Card</p>
+											<p class="address" style="    padding: 9px 0px 21px 0px;
+											">Credit Card</p>
 										</td>
 									</tr>
 									<tr>
 										<td>
-											<h2 class="info small">Credit Card Type
+											<h2 class="info small" style="text-align: right;     padding-right: 35px;
+											">
+												Credit Card Type
 												<span class="visa">Visa</span>
 											</h2>
+
 											<h2 class="info small">Credit Card Number
 												<span class="visa">xxxx-1719</span>
 											</h2>
@@ -110,7 +426,7 @@
 			<!-- ORDER COMMENT -->
 
 			<tr>
-				<td class="shippingInfo">
+				<td class="shippingInfo" style="padding: 10px 25px;">
 					<table class="outerTable">
 						<tr>
 							<td>
@@ -128,30 +444,56 @@
 			<tr>
 				<td style="padding: 10px 25px;">
 					<table class="outerTable" style="padding: 21px 12px 15px 12px;">
-						<tr style="text-align:left;">
-							<th class="tableHead" colspan="2">ITEMS ORDERED</th>
-							<th class="tableHead" style="text-align: center;">QTY</th>
-							<th class="tableHead" style="text-align: end;">PRICE</th>
-						</tr>
-						<tr>
-							<td>
-								<img src="Images/wheelchair.png" alt="">
-							</td>
-							<td>
-								<h4 class="itemTitle" style="padding-top: 11px;">Merits Health Dealer Power Chair</h4>
-								<p class="features" style="max-width: 231px;">Choose Color Option: Blue
-									Merits Health Dualer Power Chair:
-									Merits Health Dualer Power Chair
-									Power Elevating Seat Lift:
-									Power Elevating Seat Lift, Elevates 5” (Included)
-									Choose Seat Size:
-									18”W x 16”-18” x 20”H, Depth-Adjustable (Standard)
-									Choose Footrest Option:
-									Footplate, 12” x 9.5” (Standard)</p>
-							</td>
-							<td class="itemTitle price" style="text-align: center;">1</td>
-							<td class="itemTitle price" style="text-align: end;">$3,199.00</td>
-						</tr>
+						<thead>
+							<tr style="text-align:left;">
+								<th class="tableHead" colspan="2">ITEMS ORDERED</th>
+								<th class="tableHead" style="text-align: center;">QTY</th>
+								<th class="tableHead" style="text-align: end; padding-right: 10px;">PRICE</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td style="display: inline;">
+									<img style="padding-top: 11px;" src="Images/wheelchair.png" alt="">
+								</td>
+								<td>
+									<h4 class="itemTitle" style="padding-top: 11px;">Merits Health Dealer Power Chair
+									</h4>
+
+									<ul style="max-width: 231px; padding-bottom: 20px;">
+										<li class="features">Choose Color Option: Blue</li>
+										<li class="features">Merits Health Dualer Power Chair:</li>
+										<li class="features">Merits Health Dualer Power Chair</li>
+										<li class="features">Power Elevating Seat Lift:</li>
+										<li class="features">Power Elevating Seat Lift, Elevates 5” (Included)</li>
+										<li class="features">Choose Seat Size:</li>
+										<li class="features">18”W x 16”-18” x 20”H, Depth-Adjustable (Standard)</li>
+										<li class="features">Choose Footrest Option:</li>
+										<li class="features">Footplate, 12” x 9.5” (Standard)</li>
+									</ul>
+								</td>
+								<td class="itemTitle price" style="text-align: center;">1</td>
+								<td class="itemTitle price" style="text-align: end; padding-right: 5px;">$3,199.00</td>
+							</tr>
+						</tbody>
+
+						<tfoot class="tFooter" style="text-align: right; background-color: #F2FBE0;">
+
+							<tr>
+								<td colspan="3" class="priceTd" style="border-top: 1px solid #C4C4C4;">
+									<p class="footTitle">Subtotal</p>
+									<p class="footTitle">Shipping & Handling</p>
+									<p class="footTitle" style="font-family: 'Arial Bold';">Grand Total</p>
+								</td>
+								<td colspan="3" class="priceTd" style="border-top: 1px solid #C4C4C4;">
+									<p class="footTitle">$3,199.00</p>
+									<p class="footTitle">$0.00</p>
+									<p class="footTitle" style="font-family: 'Arial Bold';">$3,199.00</p>
+								</td>
+							</tr>
+
+						</tfoot>
+
 					</table>
 				</td>
 
@@ -160,27 +502,27 @@
 
 
 			<!--  FOOTER -->
-			<!-- FIRST COLUMN -->
-			<tr class="footerDiv">
-				<td class="footerData">
+
+			<tr class="footerDiv" style="background-color: #0C2A4A;">
+				<td class="footerData" style="text-align: center;">
 					<table width="100%">
 						<tr>
 							<td class="logo-columns">
-								<table class="two-column">
+								<table class="two-column" style="display: inline; vertical-align: top;">
 									<tr>
-										<td>
+										<td style=" float: right;   margin-right: -37px;">
 											<table class="innerTable">
 												<tr>
 													<td class="footerLogo">
 														<img src="Images/Footer logo.png" alt="">
 													</td>
 
-
 													<td class="footerInfo">
 														<p class="feedback">Thank you for your business!
 															<span class="feedbackSpan">Build My Wheelchair</span>
 														</p>
-														<span><a href="" class="webUrl">buildmywheelchair.com</a></span>
+														<span><a href="" class="webUrl"
+																style="text-decoration: underline;">buildmywheelchair.com</a></span>
 													</td>
 												</tr>
 											</table>
@@ -230,11 +572,6 @@
 					</table>
 				</td>
 			</tr>
-
-
-			<!-- SECOND COLUMN -->
-
-
 
 
 
